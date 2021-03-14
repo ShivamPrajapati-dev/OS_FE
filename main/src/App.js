@@ -1,10 +1,28 @@
-import './App.css';
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import "./App.css";
+import CollegeByStates from "./components/pages/CollegeByStates/CollegeByStates";
+import CollegeByCourses from "./components/pages/CollegeByCourses/CollegeByCourses";
+import CompleteCollege from "./components/pages/CompleteCollege/CompleteCollege";
+
+import College from "./components/College";
+import Navbar from "./components/Navbar";
+import Home from "./components/pages/HomePage/Home";
+import NotFound from "./components/pages/NotFound/NotFound";
 
 function App() {
   return (
-    <div className="App">
-     <h1>Hi</h1>
-    </div>
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/college" component={College} />
+        <Route path="/collegebystate" component={CollegeByStates} />
+        <Route path="/collegebycourse" component={CollegeByCourses} />
+        <Route path="/completecollege" component={CompleteCollege} />
+
+        <Route component={NotFound} />
+      </Switch>
+    </Router>
   );
 }
 
