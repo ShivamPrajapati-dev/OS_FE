@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "./Button";
 import "./College.css";
 import { MdPlace } from "react-icons/md";
 import { IoBookSharp } from "react-icons/io5";
