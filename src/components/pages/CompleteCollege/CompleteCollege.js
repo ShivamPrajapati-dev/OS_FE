@@ -74,7 +74,7 @@ const CompleteCollege = (props) => {
   function handleRowClick(id) {
     console.log(id);
     history.push({
-      pathname: "/insidecollege",
+      pathname: "/OS_FE/insidecollege",
       state: {
         detail: id,
         url: "getsimilarcollege",

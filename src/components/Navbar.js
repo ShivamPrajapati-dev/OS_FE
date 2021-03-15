@@ -18,7 +18,7 @@ function Navbar() {
       <IconContext.Provider value={{ color: "#fff" }}>
         <div className="navbar">
           <div className="navbar-container container">
-            <Link to="/" className="navbar-logo" onClick={closeMenu}>
+            <Link to="/OS_FE" className="navbar-logo" onClick={closeMenu}>
               <ImBooks className="navbar-icon" />
               StudyHard
             </Link>
@@ -27,12 +27,12 @@ function Navbar() {
             </div>
             <ul className={click ? "nav-menu active" : "nav-menu"}>
               <li className="nav-item">
-                <Link to="/" className="nav-links" onClick={closeMenu}>
+                <Link to="/OS_FE" className="nav-links" onClick={closeMenu}>
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/college" className="nav-links">
+                <Link to="/OS_FE/college" className="nav-links">
                   College
                 </Link>
               </li>

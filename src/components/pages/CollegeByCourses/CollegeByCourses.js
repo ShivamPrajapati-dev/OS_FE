@@ -57,7 +57,7 @@ const CollegeByStates = () => {
   function handleRowClick(id) {
     console.log(id);
     history.push({
-      pathname: "/completecollege",
+      pathname: "/OS_FE/completecollege",
       state: { course: id, url: "getcollegeofcourse" },
     });
   }

@@ -42,7 +42,7 @@ function MainSection({
                 >
                   {description}
                 </p>
-                <Link to="/college">
+                <Link to="/OS_FE/college">
                   <Button buttonSize="btn--wide">{buttonLabel}</Button>
                 </Link>
               </div>

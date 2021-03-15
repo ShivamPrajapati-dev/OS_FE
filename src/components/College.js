@@ -13,7 +13,10 @@ function College() {
         <div className="college__wrapper">
           <h1 className="college__heading">Find Colleges</h1>
           <div className="college__container">
-            <Link to="/collegebystate" className="college__container-card">
+            <Link
+              to="/OS_FE/collegebystate"
+              className="college__container-card"
+            >
               <div className="college__container-cardInfo">
                 <div className="icon">
                   <MdPlace />
@@ -23,7 +26,10 @@ function College() {
                 <p>Find colleges by state</p>
               </div>
             </Link>
-            <Link to="/collegebycourse" className="college__container-card">
+            <Link
+              to="/OS_FE/collegebycourse"
+              className="college__container-card"
+            >
               <div className="college__container-cardInfo">
                 <div className="icon">
                   <IoBookSharp />
@@ -35,7 +41,7 @@ function College() {
             </Link>
             <Link
               to={{
-                pathname: "/completecollege",
+                pathname: "/OS_FE/completecollege",
                 state: { url: "getallcollege" },
               }}
               className="college__container-card"

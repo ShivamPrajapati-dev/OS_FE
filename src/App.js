@@ -16,11 +16,11 @@ function App() {
       <Navbar />
       <Switch>
         <Route path="/OS_FE" exact component={Home} />
-        <Route path="/college" component={College} />
-        <Route path="/collegebystate" component={CollegeByStates} />
-        <Route path="/collegebycourse" component={CollegeByCourses} />
-        <Route path="/completecollege" component={CompleteCollege} />
-        <Route path="/insidecollege" component={InsideCollege} />
+        <Route path="/OS_FE/college" component={College} />
+        <Route path="/OS_FE/collegebystate" component={CollegeByStates} />
+        <Route path="/OS_FE/collegebycourse" component={CollegeByCourses} />
+        <Route path="/OS_FE/completecollege" component={CompleteCollege} />
+        <Route path="/OS_FE/insidecollege" component={InsideCollege} />
         <Route component={NotFound} />
       </Switch>
     </Router>
