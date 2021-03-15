@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/college/static/css/main.c6335969.chunk.css",
-    "main.js": "/college/static/js/main.5226553a.chunk.js",
-    "main.js.map": "/college/static/js/main.5226553a.chunk.js.map",
-    "runtime-main.js": "/college/static/js/runtime-main.ec033afb.js",
-    "runtime-main.js.map": "/college/static/js/runtime-main.ec033afb.js.map",
-    "static/js/2.1ca73884.chunk.js": "/college/static/js/2.1ca73884.chunk.js",
-    "static/js/2.1ca73884.chunk.js.map": "/college/static/js/2.1ca73884.chunk.js.map",
-    "index.html": "/college/index.html",
-    "static/css/main.c6335969.chunk.css.map": "/college/static/css/main.c6335969.chunk.css.map",
-    "static/js/2.1ca73884.chunk.js.LICENSE.txt": "/college/static/js/2.1ca73884.chunk.js.LICENSE.txt"
+    "main.css": "/OS_FE/static/css/main.e40fd069.chunk.css",
+    "main.js": "/OS_FE/static/js/main.e46e40fe.chunk.js",
+    "main.js.map": "/OS_FE/static/js/main.e46e40fe.chunk.js.map",
+    "runtime-main.js": "/OS_FE/static/js/runtime-main.97a3790a.js",
+    "runtime-main.js.map": "/OS_FE/static/js/runtime-main.97a3790a.js.map",
+    "static/js/2.93cd8459.chunk.js": "/OS_FE/static/js/2.93cd8459.chunk.js",
+    "static/js/2.93cd8459.chunk.js.map": "/OS_FE/static/js/2.93cd8459.chunk.js.map",
+    "index.html": "/OS_FE/index.html",
+    "static/css/main.e40fd069.chunk.css.map": "/OS_FE/static/css/main.e40fd069.chunk.css.map",
+    "static/js/2.93cd8459.chunk.js.LICENSE.txt": "/OS_FE/static/js/2.93cd8459.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.ec033afb.js",
-    "static/js/2.1ca73884.chunk.js",
-    "static/css/main.c6335969.chunk.css",
-    "static/js/main.5226553a.chunk.js"
+    "static/js/runtime-main.97a3790a.js",
+    "static/js/2.93cd8459.chunk.js",
+    "static/css/main.e40fd069.chunk.css",
+    "static/js/main.e46e40fe.chunk.js"
   ]
 }
