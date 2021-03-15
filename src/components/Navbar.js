@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
-import { ImBooks } from "react-icons/im";
+import { FaUniversity } from "react-icons/fa";
 import "./Navbar.css";
 
 function Navbar() {
@@ -19,7 +19,7 @@ function Navbar() {
         <div className="navbar">
           <div className="navbar-container container">
             <Link to="/OS_FE" className="navbar-logo" onClick={closeMenu}>
-              <ImBooks className="navbar-icon" />
+              <FaUniversity className="navbar-icon" />
               CollegeFinder
             </Link>
             <div className="menu-icon" onClick={handleClick}>
