@@ -20,7 +20,7 @@ function Navbar() {
           <div className="navbar-container container">
             <Link to="/OS_FE" className="navbar-logo" onClick={closeMenu}>
               <ImBooks className="navbar-icon" />
-              StudyHard
+              CollegeFinder
             </Link>
             <div className="menu-icon" onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}

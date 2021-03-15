@@ -11,7 +11,6 @@ import Box from "@material-ui/core/Box";
 import axios from "axios";
 import moment from "moment";
 import Chip from "@material-ui/core/Chip";
-import { useHistory } from "react-router-dom";
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
