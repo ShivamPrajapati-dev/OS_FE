@@ -55,7 +55,7 @@ const SimilarCollege = (props) => {
   const fetchItems = async () => {
     console.log(props.location.state.url);
     const response = await axios.post(
-      `http://localhost:8000/${props.location.state.url}`,
+      `https://shivam-oneshot-backend.herokuapp.com/${props.location.state.url}`,
       {
         state: props.location.state.detail,
         course: props.location.state.course,

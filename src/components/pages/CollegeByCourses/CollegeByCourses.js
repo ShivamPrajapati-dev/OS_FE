@@ -42,7 +42,7 @@ const CollegeByStates = () => {
 
   const fetchItems = async () => {
     const response = await axios.post(
-      "http://localhost:8000/getcollegebystate"
+      "https://shivam-oneshot-backend.herokuapp.com/getcollegebycourses"
     );
     setRows(response.data.data);
     setTotal(response.data.total);
@@ -52,26 +52,24 @@ const CollegeByStates = () => {
     fetchItems();
     console.log(rows);
   }, []);
-
   const history = useHistory();
 
   function handleRowClick(id) {
     console.log(id);
     history.push({
       pathname: "/completecollege",
-      state: { detail: id, url: "getcollegeofstate" },
+      state: { course: id, url: "getcollegeofcourse" },
     });
   }
 
   return (
     <Box m={4}>
-      <h1>College by state</h1>
-
+      <h1>College by courses</h1>
       <TableContainer component={Paper}>
         <Table className={classes.table} aria-label="customized table">
           <TableHead>
             <TableRow>
-              <StyledTableCell align="center">State</StyledTableCell>
+              <StyledTableCell align="center">Course</StyledTableCell>
               <StyledTableCell align="center">College Count</StyledTableCell>
               <StyledTableCell align="center">Percentage</StyledTableCell>
             </TableRow>
@@ -85,9 +83,9 @@ const CollegeByStates = () => {
                 onClick={(event) => handleRowClick(row._id)}
               >
                 <StyledTableCell align="center">{row._id}</StyledTableCell>
-                <StyledTableCell align="center">{row.count}</StyledTableCell>
+                <StyledTableCell align="center">{row.total}</StyledTableCell>
                 <StyledTableCell align="center">
-                  {`${(row.count / total) * 100.0}%`}
+                  {`${Math.floor((row.total / total) * 100)}%`}
                 </StyledTableCell>
               </StyledTableRow>
             ))}

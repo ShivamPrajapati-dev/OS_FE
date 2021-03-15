@@ -9,7 +9,9 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import Box from "@material-ui/core/Box";
 import axios from "axios";
+import moment from "moment";
 import Chip from "@material-ui/core/Chip";
+import { useHistory } from "react-router-dom";
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -46,14 +48,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const CompleteStudent = (props) => {
+const CompleteCollege = (props) => {
   const classes = useStyles();
   const [rows, setRows] = useState([]);
 
   const fetchItems = async () => {
-    console.log(props.location);
+    console.log(props.location.state.url);
     const response = await axios.post(
-      `http://localhost:8000/${props.location.state.url_student}`,
+      `https://shivam-oneshot-backend.herokuapp.com/${props.location.state.url}`,
       {
         state: props.location.state.detail,
         course: props.location.state.course,
@@ -67,30 +69,59 @@ const CompleteStudent = (props) => {
     fetchItems();
   }, []);
 
+  const history = useHistory();
+
+  function handleRowClick(id) {
+    console.log(id);
+    history.push({
+      pathname: "/insidecollege",
+      state: {
+        detail: id,
+        url: "getsimilarcollege",
+        url_student: "getcollegestudent",
+        college_id: id,
+      },
+    });
+  }
+
   return (
     <Box m={4}>
-      <h1>Students</h1>
       <TableContainer component={Paper}>
         <Table className={classes.table} aria-label="customized table">
           <TableHead>
             <TableRow>
               <StyledTableCell align="center">Id</StyledTableCell>
-              <StyledTableCell align="center">Name </StyledTableCell>
-              <StyledTableCell align="center">College_Id</StyledTableCell>
-              <StyledTableCell align="center">Skills</StyledTableCell>
+              <StyledTableCell align="center">College Name </StyledTableCell>
+              <StyledTableCell align="center">City</StyledTableCell>
+              <StyledTableCell align="center">State</StyledTableCell>
+              <StyledTableCell align="center">Country</StyledTableCell>
+              <StyledTableCell align="center">No. of Student</StyledTableCell>
+              <StyledTableCell align="center">Year Founded</StyledTableCell>
+              <StyledTableCell align="center">Courses</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {rows.map((row) => (
-              <StyledTableRow hover role="checkbox" key={row.name}>
+              <StyledTableRow
+                hover
+                role="checkbox"
+                key={row.name}
+                onClick={(event) => handleRowClick(row.id)}
+              >
                 <StyledTableCell align="center">{row.id}</StyledTableCell>
                 <StyledTableCell align="center">{row.name}</StyledTableCell>
+                <StyledTableCell align="center">{row.city}</StyledTableCell>
+                <StyledTableCell align="center">{row.state}</StyledTableCell>
+                <StyledTableCell align="center">{row.country}</StyledTableCell>
                 <StyledTableCell align="center">
-                  {row.college_id}
+                  {row.student_count}
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  {moment(row.year_founded).format("DD-mm-yyyy")}
                 </StyledTableCell>
                 <StyledTableCell align="center">
                   <div component="ul" className={classes.root}>
-                    {row.skills.map((data) => {
+                    {row.courses.map((data) => {
                       return (
                         <li key={data.key}>
                           <Chip
@@ -113,4 +144,4 @@ const CompleteStudent = (props) => {
   );
 };
 
-export default CompleteStudent;
+export default CompleteCollege;
