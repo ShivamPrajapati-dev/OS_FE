@@ -32,7 +32,11 @@ function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/OS_FE/college" className="nav-links">
+                <Link
+                  to="/OS_FE/college"
+                  className="nav-links"
+                  onClick={closeMenu}
+                >
                   College
                 </Link>
               </li>
