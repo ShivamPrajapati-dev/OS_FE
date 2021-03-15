@@ -63,7 +63,8 @@ const CollegeByStates = () => {
   }
 
   return (
-    <Box m={2}>
+    <Box m={4}>
+      <h1>College by courses</h1>
       <TableContainer component={Paper}>
         <Table className={classes.table} aria-label="customized table">
           <TableHead>
@@ -76,6 +77,8 @@ const CollegeByStates = () => {
           <TableBody>
             {rows.map((row) => (
               <StyledTableRow
+                hover
+                role="checkbox"
                 key={row.name}
                 onClick={(event) => handleRowClick(row._id)}
               >

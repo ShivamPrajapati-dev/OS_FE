@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const CompleteCollege = (props) => {
+const SimilarCollege = (props) => {
   const classes = useStyles();
   const [rows, setRows] = useState([]);
 
@@ -59,9 +59,10 @@ const CompleteCollege = (props) => {
       {
         state: props.location.state.detail,
         course: props.location.state.course,
-        college_id: props.location.state.college_id,
+        id: props.location.state.college_id,
       }
     );
+    console.log(response.data);
     setRows(response.data);
   };
 
@@ -69,23 +70,9 @@ const CompleteCollege = (props) => {
     fetchItems();
   }, []);
 
-  const history = useHistory();
-
-  function handleRowClick(id) {
-    console.log(id);
-    history.push({
-      pathname: "/insidecollege",
-      state: {
-        detail: id,
-        url: "getsimilarcollege",
-        url_student: "getcollegestudent",
-        college_id: id,
-      },
-    });
-  }
-
   return (
     <Box m={4}>
+      <h1>Similar Colleges</h1>
       <TableContainer component={Paper}>
         <Table className={classes.table} aria-label="customized table">
           <TableHead>
@@ -102,12 +89,7 @@ const CompleteCollege = (props) => {
           </TableHead>
           <TableBody>
             {rows.map((row) => (
-              <StyledTableRow
-                hover
-                role="checkbox"
-                key={row.name}
-                onClick={(event) => handleRowClick(row.id)}
-              >
+              <StyledTableRow hover role="checkbox" key={row.name}>
                 <StyledTableCell align="center">{row.id}</StyledTableCell>
                 <StyledTableCell align="center">{row.name}</StyledTableCell>
                 <StyledTableCell align="center">{row.city}</StyledTableCell>
@@ -144,4 +126,4 @@ const CompleteCollege = (props) => {
   );
 };
 
-export default CompleteCollege;
+export default SimilarCollege;

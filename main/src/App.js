@@ -8,6 +8,7 @@ import College from "./components/College";
 import Navbar from "./components/Navbar";
 import Home from "./components/pages/HomePage/Home";
 import NotFound from "./components/pages/NotFound/NotFound";
+import InsideCollege from "./components/pages/InsideCollege/InsideCollege";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <Route path="/collegebystate" component={CollegeByStates} />
         <Route path="/collegebycourse" component={CollegeByCourses} />
         <Route path="/completecollege" component={CompleteCollege} />
-
+        <Route path="/insidecollege" component={InsideCollege} />
         <Route component={NotFound} />
       </Switch>
     </Router>

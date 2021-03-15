@@ -1,9 +1,9 @@
 import React from "react";
 import { Button } from "./Button";
 import "./College.css";
-import { FaFire } from "react-icons/fa";
-import { BsXDiamondFill } from "react-icons/bs";
-import { GiCrystalize } from "react-icons/gi";
+import { MdPlace } from "react-icons/md";
+import { IoBookSharp } from "react-icons/io5";
+import { AiOutlineUnorderedList } from "react-icons/ai";
 import { IconContext } from "react-icons/lib";
 import { Link } from "react-router-dom";
 
@@ -17,7 +17,7 @@ function College() {
             <Link to="/collegebystate" className="college__container-card">
               <div className="college__container-cardInfo">
                 <div className="icon">
-                  <FaFire />
+                  <MdPlace />
                 </div>
                 <h3>By</h3>
                 <h4>State</h4>
@@ -27,17 +27,23 @@ function College() {
             <Link to="/collegebycourse" className="college__container-card">
               <div className="college__container-cardInfo">
                 <div className="icon">
-                  <BsXDiamondFill />
+                  <IoBookSharp />
                 </div>
                 <h3>By</h3>
                 <h4>Courses</h4>
                 <p>Find colleges by Courses</p>
               </div>
             </Link>
-            <Link to="/college" className="college__container-card">
+            <Link
+              to={{
+                pathname: "/completecollege",
+                state: { url: "getallcollege" },
+              }}
+              className="college__container-card"
+            >
               <div className="college__container-cardInfo">
                 <div className="icon">
-                  <GiCrystalize />
+                  <AiOutlineUnorderedList />
                 </div>
                 <h3>Get</h3>
                 <h4>All</h4>

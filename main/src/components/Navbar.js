@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { MdFingerprint } from "react-icons/md";
 import { IconContext } from "react-icons/lib";
+import { ImBooks } from "react-icons/im";
 import "./Navbar.css";
 
 function Navbar() {
@@ -19,7 +20,7 @@ function Navbar() {
         <div className="navbar">
           <div className="navbar-container container">
             <Link to="/" className="navbar-logo" onClick={closeMenu}>
-              <MdFingerprint className="navbar-icon" />
+              <ImBooks className="navbar-icon" />
               StudyHard
             </Link>
             <div className="menu-icon" onClick={handleClick}>
