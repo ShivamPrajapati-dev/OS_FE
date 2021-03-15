@@ -77,6 +77,7 @@ const CompleteStudent = (props) => {
               <StyledTableCell align="center">Id</StyledTableCell>
               <StyledTableCell align="center">Name </StyledTableCell>
               <StyledTableCell align="center">College_Id</StyledTableCell>
+              <StyledTableCell align="center">Batch Year</StyledTableCell>
               <StyledTableCell align="center">Skills</StyledTableCell>
             </TableRow>
           </TableHead>
@@ -87,6 +88,9 @@ const CompleteStudent = (props) => {
                 <StyledTableCell align="center">{row.name}</StyledTableCell>
                 <StyledTableCell align="center">
                   {row.college_id}
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  {row.batch_year}
                 </StyledTableCell>
                 <StyledTableCell align="center">
                   <div component="ul" className={classes.root}>
